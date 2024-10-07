@@ -11,40 +11,32 @@ data_nascimento = int(input("\nAno De Nascimento Do Paciente (YYYY): \n"))
 grau_de_urgencia = int(input("\n[0] Dor - [1] Febre - [2] Vomito: "))
 grau_de_urgencia2 = int(input("\n[0] Baixo - [1] Média - [2] Alta: "))
 
-if data_nascimento > 2012:
-    nome_responsavel = input("\nNome do Responsável: ")
-    rg = int(input("\nRG Do Responsável: "))
-    data_nascimento_responsavel = int(input("\nAno De Nascimento Do Responsável (YYYY): \n"))
-    print("=============== Pediatria ===============")
-    print(f"Nome do Paciente: {nome}")
-    print(f"Data de Nascimento: {data_nascimento}")
-    print(f"Grau de Urgência: {grau_de_urgencia}")
-    print(f"Nome do Responsável: {nome_responsavel}")
-    print(f"RG do Responsável: {rg}")
-    print(f"Data de Nascimento do Responsável: {data_nascimento_responsavel}")
-    print("==========================================")
-
 if data_nascimento > 2006:
+    print("\nvocê está sendo encaminhado para o pediatra\n\n")
     nome_responsavel = input("\nNome do Responsável: ")
     rg = int(input("\nRG Do Responsável: "))
     data_nascimento_responsavel = int(input("\nAno De Nascimento Do Responsável (YYYY): \n"))
-    print("=============== Pediatria ===============")
+    
+    # Exibir informações
+    print("\nInformações do Paciente e Responsável:")
     print(f"Nome do Paciente: {nome}")
-    print(f"Data de Nascimento: {data_nascimento}")
-    print(f"Grau de Urgência: {grau_de_urgencia}")
+    print(f"Ano de Nascimento do Paciente: {data_nascimento}")
     print(f"Nome do Responsável: {nome_responsavel}")
     print(f"RG do Responsável: {rg}")
-    print(f"Data de Nascimento do Responsável: {data_nascimento_responsavel}")
-    print("==========================================")
+    print(f"Ano de Nascimento do Responsável: {data_nascimento_responsavel}")
 
-elif data_nascimento <= 2006:
-    print("=============== Clínico Geral ===============")
-    print(f"Nome do Paciente: {nome}")
-    print(f"Data de Nascimento: {data_nascimento}")
-    print(f"Grau de Urgência: {grau_de_urgencia}")
-    print("=============================================")
+while True:
+    print("\n\n\n=======================================")
+    print("Menu")
+    print("1. Opção A")
+    print("2. Sair")
+    print("=======================================")
 
-soma_graus = grau_de_urgencia + grau_de_urgencia2
+    escolha = input("Escolha uma opção:\n R. ")
 
-nivel_urgencia = determinar_nivel_urgencia(soma_graus)
-print(f"Nível Geral de Urgência: {nivel_urgencia}")
+    if escolha == "1":
+        print("Você escolheu a opção A")
+    elif escolha == "2":
+        break
+    else: 
+        print("Opção inválida")
