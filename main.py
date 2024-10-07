@@ -10,13 +10,33 @@ nome = input("Nome Do Paciente: \n")
 data_nascimento = int(input("\nAno De Nascimento Do Paciente (YYYY): \n"))
 grau_de_urgencia = int(input("\n[0] Dor - [1] Febre - [2] Vomito: "))
 grau_de_urgencia2 = int(input("\n[0] Baixo - [1] Média - [2] Alta: "))
- 
+
 if data_nascimento > 2006:
-    print ("\nvocê está sendo encaminhado para o pediatra\n\n")
+    print("\nvocê está sendo encaminhado para o pediatra\n\n")
     nome_responsavel = input("\nNome do Responsável: ")
     rg = int(input("\nRG Do Responsável: "))
     data_nascimento_responsavel = int(input("\nAno De Nascimento Do Responsável (YYYY): \n"))
+    
+    # Exibir informações
+    print("\nInformações do Paciente e Responsável:")
+    print(f"Nome do Paciente: {nome}")
+    print(f"Ano de Nascimento do Paciente: {data_nascimento}")
+    print(f"Nome do Responsável: {nome_responsavel}")
+    print(f"RG do Responsável: {rg}")
+    print(f"Ano de Nascimento do Responsável: {data_nascimento_responsavel}")
 
+while True:
+    print("\n\n\n=======================================")
+    print("Menu")
+    print("1. Opção A")
+    print("2. Sair")
+    print("=======================================")
 
-for nome, idade, nome_responsavel, rg, data_nascimento_responsavel in {'Nome': nome, 'Ano nascimento': data_nascimento, 'nome_responsavel': nome_responsavel, 'rg': rg, 'data_nascimento_responsavel': data_nascimento_responsavel }.items():
-    print(f"{nome}, {idade}, {nome_responsavel}, {rg}, {data_nascimento_responsavel}")
+    escolha = input("Escolha uma opção:\n R. ")
+
+    if escolha == "1":
+        print("Você escolheu a opção A")
+    elif escolha == "2":
+        break
+    else: 
+        print("Opção inválida")
