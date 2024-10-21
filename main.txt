@@ -40,3 +40,7 @@ while True:
         break
     else: 
         print("Opção inválida")
+
+print("isso é louco nego, nao mexa com a gangue nego real")
+print ("é nego, isso é loucura nego, real")
+print ("Quebrou ate a cama")
